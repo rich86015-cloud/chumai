@@ -1,0 +1,6 @@
+{
+  "name": "趣買購物 AI 營運與行銷輔導顧問",
+  "description": "專為趣買購物同仁打造的網路行銷、電商訂單處理及實體門市虛實整合專屬AI老闆級教練系統。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
