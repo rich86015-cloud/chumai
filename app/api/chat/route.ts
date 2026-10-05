@@ -79,4 +79,13 @@ if (!response.ok) {
 
 const replyText =
   result.choices?.[0]?.message?.content?.trim() ||
-  "抱歉，我現在無法回答，請稍後再試。";
+ return NextResponse.json({ reply: replyText });
+} catch (error: unknown) {
+  console.error("Error in /api/chat:", error);
+  const message = error instanceof Error ? error.message : "發生未知錯誤";
+  return NextResponse.json(
+    { error: `AI 諮詢處理時發生錯誤：${message}。請稍後重試。` },
+    { status: 500 }
+  );
+}
+}
