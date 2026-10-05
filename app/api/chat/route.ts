@@ -16,9 +16,9 @@ export async function POST(req: NextRequest) {
     const apiKey = process.env.OPENAI_API_KEY;
     if (!apiKey) {
       return NextResponse.json(
-        error: "OPENAI_API_KEY 尚未設定，請在 Vercel Settings > Environment Variables 設定 OpenAI API Key。",
-        { status: 500 }
-      );
+  { error: "OPENAI_API_KEY 尚未設定，請在 Vercel Settings > Environment Variables 設定 OpenAI API Key。" },
+  { status: 500 }
+);
     }
 
     const body = await req.json();
