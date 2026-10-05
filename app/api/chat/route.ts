@@ -77,7 +77,7 @@ if (!response.ok) {
   throw new Error(result.error?.message || `OpenAI API 錯誤（${response.status}）`);
 }
 
-const replyText =
+
  const replyText =
   result.choices?.[0]?.message?.content?.trim() ||
   "抱歉，我現在無法回答，請稍後再試。";
