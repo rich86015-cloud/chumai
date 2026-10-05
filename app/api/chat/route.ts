@@ -78,8 +78,11 @@ if (!response.ok) {
 }
 
 const replyText =
+ const replyText =
   result.choices?.[0]?.message?.content?.trim() ||
- return NextResponse.json({ reply: replyText });
+  "抱歉，我現在無法回答，請稍後再試。";
+
+return NextResponse.json({ reply: replyText });
 } catch (error: unknown) {
   console.error("Error in /api/chat:", error);
   const message = error instanceof Error ? error.message : "發生未知錯誤";
